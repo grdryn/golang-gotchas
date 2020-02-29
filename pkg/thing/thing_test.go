@@ -18,6 +18,21 @@ func TestThing(t *testing.T) {
 			expect: MakeThing(),
 			mutate: func(given Thing) Thing { return given },
 		},
+		{
+			name:  "when labels modified, subThing labels should not be implicitly modified",
+			given: MakeThing(),
+			expect: Thing{
+				Labels: map[string]string{"key": "value"},
+				SubThing: SubThing{
+					Labels: map[string]string{},
+				},
+			},
+			mutate: func(given Thing) Thing {
+				given.Labels["key"] = "value"
+				// given.SubThing.Labels should be empty...
+				return given
+			},
+		},
 	}
 
 	for _, scenario := range scenarios {
