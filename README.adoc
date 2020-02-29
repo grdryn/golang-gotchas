@@ -1,0 +1,30 @@
+= Golang Gotchas
+
+This project is intended to demonstrate rough edges that I discover in
+the Go programming language, as I learn and use it.
+
+== Usage
+
+Even though there's source code here, and it's available under a free
+software license, I wouldn't recommend using any of it -- it's
+intentionally not good.
+
+The "gotchas" are demonstrated through failing tests, which can be run
+using the following command:
+
+[source,shell]
+----
+go test ./...
+----
+
+== License
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at
+your option) any later version.
+
+== Contributing
+
+If you would like to add any gotchas to this repo, feel free to open a
+pull request on GitHub, or mail me a patch set, or something.
